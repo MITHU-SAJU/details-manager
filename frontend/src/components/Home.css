@@ -1,0 +1,211 @@
+
+
+.home-container {
+  padding-left: 350px; /* Adjust padding to account for sidebar */
+  text-align: center;
+  font-family: Arial, sans-serif;
+ 
+  background-image: url('../assets/homebg.jpg');
+  background-size: cover;
+  position:fixed;
+ 
+  
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Optional: Add a slight noise texture for an industrial feel */
+ 
+.home-header {
+  
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+
+
+
+.logo {
+  margin-right: 5%;
+  max-width: 250px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  margin-top: 7rem;
+  max-width: 1200px;
+  position: relative;
+}
+
+.card {
+  padding: 20px;
+ background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.3);
+  width: 250px;
+  height: 300px;
+  margin: 50px;
+  position: relative;
+  opacity: 0; /* Start invisible */
+  transform: translateX(0); /* Ensure cards are positioned correctly before animation */
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* Keep final state after animation */
+  border-radius: 20px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23FFD54F" fill-opacity="1" d="M0,32L30,69.3C60,107,120,181,180,181.3C240,181,300,107,360,106.7C420,107,480,181,540,218.7C600,256,660,256,720,224C780,192,840,128,900,112C960,96,1020,128,1080,138.7C1140,149,1200,139,1260,138.7C1320,139,1380,149,1410,154.7L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card.slide-in-left {
+  animation-name: slide-in-left;
+}
+
+.card.slide-in-right {
+  animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.card:hover h2 {
+  color: #222;
+}
+
+.card p {
+  color: #555;
+  font-size: 1em;
+  margin: 0;
+}
+.viewdomain,.viewservers{
+  margin-top: 55%;
+  background-color: red;
+
+}
+button {
+  
+  margin-left: 10px;
+  margin-top: 7rem;
+ 
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: red;
+  color: white;
+  transition: background 0.3s ease, transform 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background: black;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+button .icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+button:hover .icon {
+  transform: translateX(5px);
+}
+
+.toggle-button-sidebar {
+  position: fixed;
+
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 50%;
+ 
+}
+
+.toggle-button:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+
+.toggle-button.open {
+  background-color: #0b7dda;
+}
+
+/* Add this to your CSS file, e.g., Home.css */
+
+.logout-button-one {
+  margin-left: 90%;
+  margin-top: -5rem;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+logout-button-one:hover {
+  background-color: black;
+}
+
+

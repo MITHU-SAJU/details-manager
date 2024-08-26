@@ -1,0 +1,154 @@
+/* SideBar.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.toggle-button-sidebar {
+  position: fixed;
+  top: -5.5rem;
+  left: 20px;
+
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.toggle-button-sidebar.open {
+  transform: rotate(90deg);
+  background-color: black;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  height: 100%;
+  background-image: url('../assets/homebg.jpg');
+  color: black;
+  transition: left 0.5s ease, transform 0.5s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-100%);
+}
+
+.sidebar.open {
+  left: 0;
+  transform: translateY(0);
+}
+
+.sidebar-nav ul {
+  margin-top: 20%;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar-nav ul li {
+
+  width: 80%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.sidebar-nav ul li a {
+  margin-top: 4rem;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50px;
+}
+
+.sidebar-nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-nav ul li a .fa-icon {
+  margin-right: 10px;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.sidebar.open {
+  animation: slideInDown 0.5s forwards;
+}
+
+.sidebar:not(.open) {
+  animation: slideOutUp 0.5s forwards;
+}
+
+.toggle-button-sidebar {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.toggle-button-sidebar:hover {
+  animation: rubberBand 1s;
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

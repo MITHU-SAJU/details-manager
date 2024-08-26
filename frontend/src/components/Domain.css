@@ -1,0 +1,320 @@
+/* General Styles */
+
+.domain-header {
+  border-bottom: 2px solid #ccc;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: whitesmoke;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+
+
+.logo-domain{
+  
+    margin-left: 38%;
+    max-width: 250px;
+    height: 100px;
+    transition: transform 0.3s ease;
+  }
+
+
+.search-bar-container {
+  
+  margin: 7rem ;
+ 
+  position: relative;
+}
+
+.search-bar {
+  position: fixed;
+  margin-left: 25%;
+  width: 30%;
+ 
+  padding: 14px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-button {
+  position: fixed;
+  margin-right: 420px;
+  right: 0;
+  top: 0;
+  height: 7%;
+  padding: 0 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-button i {
+  margin-right: 5px;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.back-button-domain,
+.form-toggle-button-domain {
+  position: fixed;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button-domain {
+  top: 0rem;
+  left: 20px;
+}
+
+.back-button-domain:hover {
+  background-color: #333;
+}
+
+.form-toggle-button-domain {
+  top: 0rem;
+  left: 150px;
+  background-color: orange;
+}
+
+.form-toggle-button-domain:hover {
+  background-color: #e87e00;
+}
+
+/* Form Container */
+.form-container-domain {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.form-popup-domain {
+  background-image: url('../assets/homebg.jpg');
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-row input,
+.form-row select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Form Buttons */
+.form-buttons-domain {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.form-add-button-domain,
+.form-cancel-button-domain {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-add-button-domain {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-add-button-domain:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.form-cancel-button-domain {
+  background-color: #f44336;
+  color: white;
+}
+
+.form-cancel-button-domain:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+}
+
+/* Table Styles */
+.table-container {
+  margin: 10px;
+  overflow-x: auto;
+  background-color: #f9f9f9; /* Light background to highlight the table */
+  padding: 10px;
+  border-radius: 1px; /* Rounded corners for container */
+}
+
+/* Table Styles */
+table {
+  margin-top: 60px;
+  width: 100%;
+  height: 40px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for table */
+}
+
+/* Table Header */
+thead {
+  background-color: orange; 
+  color: white;
+}
+
+thead th {
+  padding: 8px; /* Reduced padding */
+  text-align: left;
+  font-size: 18px; /* Smaller font size */
+  font-weight: bold;
+  border-bottom: 1px solid #ddd; /* Thinner border */
+}
+
+thead th:first-child {
+  border-radius: 8px 0 0 0; /* Rounded corners for the left header cell */
+}
+
+thead th:last-child {
+  border-radius: 0 8px 0 0; /* Rounded corners for the right header cell */
+}
+
+/* Table Body */
+tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f4f4; /* Alternating row colors */
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0; /* Light grey on hover */
+}
+
+/* Table Cells */
+td {
+  padding: 8px; /* Reduced padding */
+  text-align: left;
+  font-size: 18px; /* Smaller font size */
+  border-bottom: 1px solid #ddd; /* Thinner border */
+}
+
+td:first-child {
+  border-radius: 0 0 0 8px; /* Rounded corners for the left cell */
+}
+
+td:last-child {
+  border-radius: 0 0 8px 0; /* Rounded corners for the right cell */
+}
+
+/* Edit/Delete Buttons */
+.edit-button,
+.delete-button {
+  margin-top: 10px;
+  background: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px; /* Smaller font size */
+  transition: color 0.3s ease;
+}
+
+.edit-button:hover {
+  color: #0056b3;
+}
+
+.delete-button {
+  color: #f44336;
+}
+
+.delete-button:hover {
+  color: #e53935;
+}
+
+/* FontAwesome Icons */
+.fas {
+  margin-right: 5px;
+}
