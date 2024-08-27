@@ -1,12 +1,12 @@
 {
 
-    "homepage": "https://MITHU-SAJU.github.io/one",
+    
     "name": "backend",
     "version": "1.0.0",
     "private": true,
     "scripts": {
         "start": "node server.js",
-        "build": "react-scripts build",
+       
         "test": ""
     },
     "dependencies": {
